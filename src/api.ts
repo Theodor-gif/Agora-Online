@@ -5,3 +5,5 @@ const personName: string = "Alex";
 if (tas) {
   tas.innerHTML = personName;
 }
+
+export const example: number = 3;

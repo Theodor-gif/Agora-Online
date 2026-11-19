@@ -3,5 +3,5 @@ const personName = "Alex";
 if (tas) {
     tas.innerHTML = personName;
 }
-export {};
+export const example = 3;
 //# sourceMappingURL=api.js.map
