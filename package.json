@@ -1,0 +1,27 @@
+{
+  "name": "agora-online-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/script.js",
+    "dev": "tsc --wacth"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theodor-gif/Agora-Online.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Theodor-gif/Agora-Online/issues"
+  },
+  "homepage": "https://github.com/Theodor-gif/Agora-Online#readme",
+  "dependencies": {
+    "typescript": "^7.0.2"
+  }
+}
