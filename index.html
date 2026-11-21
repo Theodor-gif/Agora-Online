@@ -3,12 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/homepage-style.css" />
     <title>Home page</title>
   </head>
   <body>
-    <h1>Home page</h1>
-    <p id="name"></p>
-    <a href="/pages/posts-page.html" target="_self">Posts</a>
+    <header id="header-container">
+      <img
+        id="header-logo"
+        src="./assets/logo/complete-logo-icon.png"
+        alt="company-logo"
+      />
+      <nav id="navigation-container-main">
+        <ul id="navigation-main">
+          <li>
+            <a class="nav-btn" href="index.html" target="_self"
+              ><img
+                class="nav-icon"
+                src="./assets/navigation/home-icon.png"
+                alt="homepage-icon"
+            /></a>
+          </li>
+          <li>
+            <a class="nav-btn" href="./pages/posts-page.html" target="_self">
+              <img
+                class="nav-icon"
+                src="./assets/navigation/posts-icon.png"
+                alt="post-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a class="nav-btn" href="" target="_self"
+              ><img
+                href=""
+                target="_self"
+                class="nav-icon"
+                src="./assets/navigation/AdminUser-icon.png"
+                alt="admin-icon"
+            /></a>
+          </li>
+          <li>
+            <a class="nav-btn" href="./pages/fav-page.html" target="_self">
+              <img
+                class="nav-icon"
+                src="./assets//navigation/fav-icon.png"
+                alt="admin-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <button id="nav-secondary-btn" type="button">
+              <img
+                class="nav-icon nav-btn"
+                src="./assets/navigation/hamburger-menu-icon.svg"
+                alt="hamburger-icon"
+              />
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <nav id="navigation-container-secondary">
+        <ul id="navigation-secondary">
+          <li><a href="" target="_self">Account information</a></li>
+          <li>
+            <a href="./pages/post-add-page.html" target="_selft">Add Post</a>
+          </li>
+          <li><a href="" target="_self">My Post's</a></li>
+          <li><a href="" target="_self">My message's</a></li>
+          <li><button type="button">Log out</button></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-container">
+      <img
+        src="./assets/logo/symbol-logo-icon.png"
+        alt="company-logo-icon"
+        width="150"
+      />
+      <form>
+        <label for="search-post"></label>
+        <input
+          id="search-post"
+          type="text"
+          name="search-post"
+          placeholder="Search"
+        />
+        <button type="button">Search</button>
+      </form>
+    </main>
+    <footer id="footer-container">
+      <small>&copy; 2026 Agorà Online | Created by Theodoros Mitropoulos</small>
+    </footer>
     <script type="module" src="./dist/main.js" defer></script>
   </body>
 </html>

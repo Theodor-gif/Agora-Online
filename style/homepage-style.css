@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*.Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* Header */
+
+  #header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+  }
+  #header-logo {
+    flex: 1 1 auto; /* can grow and shrink */
+    min-width: 0; /* allows shrinking below its content size */
+    max-width: 250px;
+    width: 100%;
+  }
+  #navigation-main {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+  }
+  .nav-icon {
+    width: 17.5px;
+  }
+  #navigation-container-secondary {
+    display: none;
+  }
+  .nav-btn {
+    cursor: pointer;
+  }
+  #nav-secondary-btn {
+    border: none;
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* Main */
+
+  #main-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Footer */
+
+  #footer-container {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Small devices ( portrait tablets and large phones, 600px and up ) */
+@media only screen and (min-width: 601px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/*.Medium devices ( landscape tablets, 768px and up ) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* Large devices ( laptops/desktops, 992px and up ) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* Extra large devices ( large laptops and desktops, 1200px and up ) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: black;
+  }
+}
