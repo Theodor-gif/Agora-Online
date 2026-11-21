@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/accountpage-style.css" />
+    <title>Account page</title>
+  </head>
+  <body>
+    <header id="header-container">
+      <img
+        id="header-logo"
+        src="../assets/logo/complete-logo-icon.png"
+        alt="company-logo"
+      />
+      <nav id="navigation-container-main">
+        <ul id="navigation-main">
+          <li>
+            <a class="nav-btn" href="../index.html" target="_self"
+              ><img
+                class="nav-icon"
+                src="../assets/navigation/home-icon.png"
+                alt="homepage-icon"
+            /></a>
+          </li>
+          <li>
+            <a class="nav-btn" href="./posts-page.html" target="_self">
+              <img
+                class="nav-icon"
+                src="../assets/navigation/posts-icon.png"
+                alt="post-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a class="nav-btn" href="./account-page.html" target="_self"
+              ><img
+                href=""
+                target="_self"
+                class="nav-icon"
+                src="../assets/navigation/AdminUser-icon.png"
+                alt="admin-icon"
+            /></a>
+          </li>
+          <li>
+            <a class="nav-btn" href="./fav-page.html" target="_self">
+              <img
+                class="nav-icon"
+                src="../assets//navigation/fav-icon.png"
+                alt="admin-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <button id="nav-secondary-btn" type="button">
+              <img
+                class="nav-icon nav-btn"
+                src="../assets/navigation/hamburger-menu-icon.svg"
+                alt="hamburger-icon"
+              />
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <nav id="navigation-container-secondary">
+        <ul id="navigation-secondary">
+          <li><a href="#" target="_self">Account information</a></li>
+          <li>
+            <a href="../pages/post-add-page.html" target="_self">Add Post</a>
+          </li>
+          <li><a href="#" target="_self">My Posts</a></li>
+          <li><a href="#" target="_self">My messages</a></li>
+          <li><button type="button">Log out</button></li>
+        </ul>
+      </nav>
+    </header>
+    <button type="button">
+      <img
+        src="../assets/other-icons/arrow-up-icon.png"
+        alt="arrow-up-icon"
+        width="20"
+      />
+    </button>
+    <main>
+      <h1>Welcome to Agorà Online</h1>
+      <p>
+        Create a free account to post items and message sellers, or log in if
+        you already have one.
+      </p>
+      <p>Required fields *</p>
+      <div>
+        <button type="button">Create account</button>
+        <button type="button">Log in</button>
+      </div>
+      <form id="register-form" class="form-container">
+        <h2>Create your account</h2>
+        <label for="first-name">First name<span> *</span></label>
+        <div>
+          <input
+            id="first-name"
+            type="text"
+            name="first_name"
+            autocomplete="on"
+            required
+            aria-describedby="first-name-error"
+          />
+          <img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+        </div>
+        <small id="first-name-error">Please enter your first name.</small>
+        <label for="last-name">Last name<span> *</span></label>
+        <div>
+          <input
+            id="last-name"
+            type="text"
+            name="last_name"
+            autocomplete="on"
+            required
+            aria-describedby="last-name-error"
+          />
+          <img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+        </div>
+        <small id="last-name-error">Please enter your last name.</small>
+        <label for="age">Age<span> *</span></label>
+        <div>
+          <input
+            id="age"
+            type="number"
+            name="age"
+            placeholder="You must be 18 or older."
+            min="18"
+            required
+            aria-describedby="age-error"
+          />
+          <img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+        </div>
+        <small id="age-error">You must be at least 18 years old.</small>
+        <label for="email-register">Email<span> *</span></label>
+        <div>
+          <input
+            id="email-register"
+            type="email"
+            name="email"
+            placeholder="name@example.com"
+            autocomplete="on"
+            required
+            aria-describedby="email-hint email-taken-error"
+          />
+          <img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+        </div>
+        <small id="email-error">Please enter a valid email address.</small>
+        <small id="email-taken-error">This email is already registered.</small>
+        <label for="phone-number">Telephone number<span> *</span></label>
+        <div>
+          <input
+            id="phone-number"
+            type="tel"
+            name="tel_number"
+            autocomplete="on"
+            required
+            aria-describedby="phone-error"
+          />
+          <img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+        </div>
+        <small id="phone-error">Please enter a valid number.</small>
+        <label for="password-register">Password<span> *</span></label>
+        <div>
+          <input
+            id="password-register"
+            type="password"
+            name="password"
+            required
+            maxlength="64"
+            aria-describedby="password-error"
+          /><img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+          <button type="button">
+            <img
+              src="../assets/other-icons/see-icon.png"
+              alt="eye-icon"
+              width="15"
+            />
+            <img
+              src="../assets/other-icons/notsee-icon.png"
+              alt="eye-icon"
+              width="15"
+            />
+          </button>
+        </div>
+        <small id="password-error">Please enter a valid password.</small>
+        <label for="password-confirm">Confirm password<span> *</span></label>
+        <div>
+          <input
+            id="password-confirm"
+            type="password"
+            name="password-confirm"
+            required
+            aria-describedby="password-hint"
+          />
+          <img
+            src="../assets/other-icons/correct-icon.png"
+            alt="correct-icon"
+            width="10"
+          />
+          <img
+            src="../assets/other-icons/wrong-icon.png"
+            alt="wrong-icon"
+            width="10"
+          />
+          <button type="button">
+            <img
+              src="../assets/other-icons/see-icon.png"
+              alt="eye-icon"
+              width="15"
+            />
+            <img
+              src="../assets/other-icons/notsee-icon.png"
+              alt="eye-icon"
+              width="15"
+            />
+          </button>
+        </div>
+        <small id="password-hint">Password do not match.</small>
+        <ul>
+          <li>
+            <img
+              src="../assets/other-icons/attencion-icon.png"
+              alt="alert-icon"
+              width="15"
+            />
+            At least one upper case English letter
+          </li>
+          <li>
+            <img
+              src="../assets/other-icons/attencion-icon.png"
+              alt="alert-icon"
+              width="15"
+            />
+            At least one digit
+          </li>
+          <li>
+            <img
+              src="../assets/other-icons/attencion-icon.png"
+              alt="alert-icon"
+              width="15"
+            />
+            At least one lower case English letter
+          </li>
+          <li>
+            <img
+              src="../assets/other-icons/attencion-icon.png"
+              alt="alert-icon"
+              width="15"
+            />
+            At least one special character: -./',;&amp;@#*)(_+:&ldquo;~
+          </li>
+          <li>
+            <img
+              src="../assets/other-icons/attencion-icon.png"
+              alt="alert-icon"
+              width="15"
+            />
+            Minimum eight in length
+          </li>
+        </ul>
+        <label for="check-terms"
+          ><input
+            id="check-terms"
+            type="checkbox"
+            name="check-terms"
+            required
+          />I accept the Terms and Conditions and the Privacy Policy</label
+        >
+        <small>You need to accept the terms to continue.</small>
+        <div id="formRegister-btns-container" class="form-btns-container">
+          <button type="submit">Register</button>
+          <button type="reset">Clear all</button>
+        </div>
+      </form>
+      <form id="log-form" class="form-container">
+        <h2>Log in</h2>
+        <label for="email-log">Email<span> *</span></label>
+        <input
+          id="email-log"
+          type="email"
+          name="email"
+          autocomplete="on"
+          required
+        />
+        <label for="password-log">Password<span> *</span></label>
+        <div>
+          <input
+            id="password-log"
+            type="password"
+            name="password"
+            required
+            maxlength="64"
+          />
+          <button type="button">
+            <img
+              src="../assets/other-icons/see-icon.png"
+              alt="eye-icon"
+              width="15"
+            /><img
+              src="../assets/other-icons/notsee-icon.png"
+              alt="eye-icon"
+              width="15"
+            />
+          </button>
+        </div>
+        <div class="form-btns-container">
+          <button type="submit">Log in</button>
+          <button type="reset">Clear all</button>
+        </div>
+      </form>
+    </main>
+    <footer id="footer-container">
+      <section>
+        <nav class="footer-parts">
+          <h3>Quick Links</h3>
+          <ul id="footer-list-one">
+            <li><a href="../index.html" target="_self">Home</a></li>
+            <li><a href="./posts-page.html" target="_self">Posts</a></li>
+            <li><a href="./fav-page.html" target="_self">Favorites</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-parts">
+          <h3>Policy</h3>
+          <ul id="footer-list-two">
+            <li><a href="#" target="_self">Privacy Policy</a></li>
+            <li><a href="#" target="_self">Terms &amp; Conditions</a></li>
+            <li><a href="#" target="_self">Safety Tips</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-parts">
+          <h3>Follow Us</h3>
+          <ul id="footer-list-three">
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="../assets/social/facebook-icon.png"
+                  alt="facebook-icon"
+                  width="15"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="../assets/social/instagram-icon.png"
+                  alt="instagram-icon"
+                  width="15"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="../assets/social/youtube-icon.png"
+                  alt="youtube-icon"
+                  width="20"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="../assets/social/twitter-icon.png"
+                  alt="twitter-icon"
+                  width="12.5"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <small id="copy"
+        >&copy; 2026 Agorà Online | Created by Theodoros Mitropoulos</small
+      >
+    </footer>
+    <script src="../dist/main.js" type="module"></script>
+  </body>
+</html>

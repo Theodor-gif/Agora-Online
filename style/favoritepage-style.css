@@ -19,8 +19,8 @@
     gap: 8px;
   }
   #header-logo {
-    flex: 1 1 auto; /* can grow and shrink */
-    min-width: 0; /* allows shrinking below its content size */
+    flex: 1 1 auto;
+    min-width: 0;
     max-width: 250px;
     width: 100%;
   }

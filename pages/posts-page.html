@@ -33,10 +33,8 @@
             </a>
           </li>
           <li>
-            <a class="nav-btn" href="" target="_self"
+            <a class="nav-btn" href="./account-page.html" target="_self"
               ><img
-                href=""
-                target="_self"
                 class="nav-icon"
                 src="../assets/navigation/AdminUser-icon.png"
                 alt="admin-icon"
@@ -68,199 +66,303 @@
           <li>
             <a href="../pages/post-add-page.html" target="_self">Add Post</a>
           </li>
-          <li><a href="" target="_self">My Post's</a></li>
-          <li><a href="" target="_self">My message's</a></li>
+          <li><a href="#" target="_self">My Posts</a></li>
+          <li><a href="#" target="_self">My messages</a></li>
           <li><button type="button">Log out</button></li>
         </ul>
       </nav>
     </header>
+    <button type="button">
+      <img
+        src="../assets/other-icons/arrow-up-icon.png"
+        alt="arrow-up-icon"
+        width="20"
+      />
+    </button>
     <main>
-      <h1>Posts page</h1>
+      <h1>Browse all posts</h1>
+      <p>
+        Find great deals from people in your community. Search by keyword, or
+        use the filters to narrow the results by price, category and condition.
+      </p>
       <form>
-        <label for="search"></label>
-        <input id="search" type="text" name="search" placeholder="Search" />
+        <div>
+          <label for="search">
+            <img
+              src="../assets/other-icons/Search-icon.png"
+              alt="search-icon"
+              width="15"
+            />
+          </label>
+          <input
+            id="search"
+            type="text"
+            name="search"
+            placeholder="Search posts, e.g. &ldquo;bike&rdquo; or &ldquo;iPhone&rdquo;"
+          />
+        </div>
         <button type="submit">Search</button>
       </form>
       <section>
-        <aside>
-          <form id="filters">
-            <details>
-              <summary>Price</summary>
-              <div>
+        <div>
+          <button type="button">Filters</button>
+          <aside>
+            <h2>Filter results</h2>
+            <form id="filters">
+              <details>
+                <summary>Price</summary>
+                <div>
+                  <input
+                    type="number"
+                    name="min_price"
+                    placeholder="From"
+                    min="0"
+                  /><span>-</span>
+                  <input
+                    type="number"
+                    name="max_price"
+                    placeholder="To"
+                    min="0"
+                  /><span>&euro;</span>
+                </div>
+              </details>
+              <details>
+                <summary>Category</summary>
+                <label for="category-all"
+                  ><input
+                    id="category-all"
+                    type="radio"
+                    name="category"
+                    value=""
+                    checked
+                  />All</label
+                >
+                <label for="category-electronics"
+                  ><input
+                    id="category-electronics"
+                    type="radio"
+                    name="category"
+                    value="electronics"
+                  />Electronics</label
+                >
+                <label for="category-clothes"
+                  ><input
+                    id="category-clothes"
+                    type="radio"
+                    name="category"
+                    value="clothes"
+                  />Clothes</label
+                >
+                <label for="category-home"
+                  ><input
+                    id="category-home"
+                    type="radio"
+                    name="category"
+                    value="home"
+                  />Home</label
+                >
+                <label for="category-sports"
+                  ><input
+                    id="category-sports"
+                    type="radio"
+                    name="category"
+                    value="sports"
+                  />Sports</label
+                >
+                <label for="category-vehicles"
+                  ><input
+                    id="category-vehicles"
+                    type="radio"
+                    name="category"
+                    value="vehicles"
+                  />Vehicles</label
+                >
+                <label for="category-media"
+                  ><input
+                    id="category-media"
+                    type="radio"
+                    name="category"
+                    value="books_and_media"
+                  />Books and media</label
+                >
+                <label for="category-toys"
+                  ><input
+                    id="category-toys"
+                    type="radio"
+                    name="category"
+                    value="toys_and_kids"
+                  />Toys and kids</label
+                >
+                <label for="category-tools"
+                  ><input
+                    id="category-tools"
+                    type="radio"
+                    name="category"
+                    value="garden_and_tools"
+                  />Garden and tools</label
+                >
+                <label for="category-pets"
+                  ><input
+                    id="category-pets"
+                    type="radio"
+                    name="category"
+                    value="pets"
+                  />Pets</label
+                >
+                <label for="category-other"
+                  ><input
+                    id="category-other"
+                    type="radio"
+                    name="category"
+                    value="other"
+                  />Other</label
+                >
+              </details>
+              <details>
+                <summary>Condition</summary>
+                <label for="condition-any">
+                  <input
+                    id="condition-any"
+                    type="radio"
+                    name="condition"
+                    value=""
+                    checked
+                  />Any
+                </label>
+                <label for="condition-new">
+                  <input
+                    id="condition-new"
+                    type="radio"
+                    name="condition"
+                    value="new"
+                  />New
+                </label>
+                <label for="condition-like-new">
+                  <input
+                    id="condition-like-new"
+                    type="radio"
+                    name="condition"
+                    value="like_new"
+                  />Like new
+                </label>
+                <label for="condition-used"
+                  ><input
+                    id="condition-used"
+                    type="radio"
+                    name="condition"
+                    value="used"
+                  />Used</label
+                >
+                <label for="condition-for-parts">
+                  <input
+                    id="condition-for-parts"
+                    type="radio"
+                    name="condition"
+                    value="for_parts"
+                  />For parts
+                </label>
+              </details>
+              <details>
+                <summary>Area</summary>
                 <input
-                  type="number"
-                  name="min-price"
-                  placeholder="from"
-                  min="0"
-                  max="1000"
-                /><span>-</span>
-                <input
-                  type="number"
-                  name="max-price"
-                  placeholder="to"
-                  min="0"
-                  max="1000"
+                  type="text"
+                  name="area"
+                  placeholder="City or area"
+                  aria-label="Area"
                 />
-              </div>
-            </details>
-            <details>
-              <summary>Category</summary>
-              <label for="category-all"
-                ><input
-                  id="category-all"
-                  type="checkbox"
-                  name="category"
-                  value="all"
-                />All</label
-              >
-              <label for="category-electronics"
-                ><input
-                  id="category-electronics"
-                  type="checkbox"
-                  name="category"
-                  value="electronics"
-                />Electronics</label
-              >
-              <label for="category-clothes"
-                ><input
-                  id="category-clothes"
-                  type="checkbox"
-                  name="category"
-                  value="clothes"
-                />Clothes</label
-              >
-              <label for="category-home"
-                ><input
-                  id="category-home"
-                  type="checkbox"
-                  name="category"
-                  value="home"
-                />Home</label
-              >
-              <label for="category-sports"
-                ><input
-                  id="category-sports"
-                  type="checkbox"
-                  name="category"
-                  value="sports"
-                />Sports</label
-              >
-              <label for="category-vehicles"
-                ><input
-                  id="category-vehicles"
-                  type="checkbox"
-                  name="category"
-                  value="vehicles"
-                />Vehicles</label
-              >
-              <label for="category-other"
-                ><input
-                  id="category-other"
-                  type="checkbox"
-                  name="category"
-                  value="other"
-                />Other</label
-              >
-            </details>
-            <details>
-              <summary>Condition</summary>
-              <label for="condition-new">
-                <input
-                  id="condition-new"
-                  type="checkbox"
-                  name="condition"
-                  value="new"
-                />New
-              </label>
-              <labe for="condition-like-new">
-                <input
-                  id="condition-like-new"
-                  type="checkbox"
-                  name="condition"
-                  value="like new"
-                />Like new
-              </labe>
-              <label for="condition-used"
-                ><input
-                  id="condition-used"
-                  type="checkbox"
-                  name="condition"
-                  value="used"
-                />Used</label
-              >
-              <label for="condition-for-parts">
-                <input
-                  id="condition-for-parts"
-                  type="checkbox"
-                  name="condition"
-                  value="for parts"
-                />For parts
-              </label>
-            </details>
-            <details>
-              <summary></summary>
-            </details>
-            <button type="reset">Clear All</button>
-          </form>
-        </aside>
+              </details>
+              <details>
+                <summary>Sort by</summary>
+                <label
+                  ><input type="radio" name="sort" value="newest" checked />
+                  Newest first</label
+                >
+                <label
+                  ><input type="radio" name="sort" value="oldest" /> Oldest
+                  first</label
+                >
+                <label
+                  ><input type="radio" name="sort" value="price_asc" /> Price:
+                  low to high</label
+                >
+                <label
+                  ><input type="radio" name="sort" value="price_desc" /> Price:
+                  high to low</label
+                >
+              </details>
+              <button type="reset">Clear All</button>
+            </form>
+          </aside>
+        </div>
+        <div>
+          <p>24 posts found</p>
+          <p>No posts match your search.</p>
+          <p>Loading posts...</p>
+          <p>Something went wrong while loading the posts. Please try again.</p>
+          <button type="button">Show more posts</button>
+        </div>
       </section>
     </main>
     <footer id="footer-container">
       <section>
-        <div class="footer-parts">
-          <h4>Quik Links</h4>
+        <nav class="footer-parts">
+          <h3>Quick Links</h3>
           <ul id="footer-list-one">
-            <li>Home</li>
-            <li>Post's</li>
-            <li>Favorites</li>
+            <li><a href="../index.html" target="_self">Home</a></li>
+            <li><a href="./posts-page.html" target="_self">Posts</a></li>
+            <li><a href="./fav-page.html" target="_self">Favorites</a></li>
           </ul>
-        </div>
-        <div class="footer-parts">
-          <h4>Policy</h4>
+        </nav>
+        <nav class="footer-parts">
+          <h3>Policy</h3>
           <ul id="footer-list-two">
-            <li>Privacy Policy</li>
-            <li>Terms &amp; Conditions</li>
-            <li>Cancellation Policy</li>
+            <li><a href="#" target="_self">Privacy Policy</a></li>
+            <li><a href="#" target="_self">Terms &amp; Conditions</a></li>
+            <li><a href="#" target="_self">Safety Tips</a></li>
           </ul>
-        </div>
-        <div class="footer-parts">
-          <h4>Follow Us</h4>
+        </nav>
+        <nav class="footer-parts">
+          <h3>Follow Us</h3>
           <ul id="footer-list-three">
             <li>
-              <img
-                src="../assets/social/facebook-icon.png"
-                alt="facebook-icon"
-                width="15"
-              />
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="../assets/social/facebook-icon.png"
+                  alt="facebook-icon"
+                  width="15"
+              /></a>
             </li>
             <li>
-              <img
-                src="../assets/social/instagram-icon.png"
-                alt="instagram-icon"
-                width="15"
-              />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="../assets/social/instagram-icon.png"
+                  alt="instagram-icon"
+                  width="15"
+              /></a>
             </li>
             <li>
-              <img
-                src="../assets/social/youtube-icon.png"
-                alt="youtube-icon"
-                width="20"
-              />
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="../assets/social/youtube-icon.png"
+                  alt="youtube-icon"
+                  width="20"
+              /></a>
             </li>
             <li>
-              <img
-                src="../assets/social/twitter-icon.png"
-                alt="twitter-icon"
-                width="12.5"
-              />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="../assets/social/twitter-icon.png"
+                  alt="twitter-icon"
+                  width="12.5"
+              /></a>
             </li>
           </ul>
-        </div>
+        </nav>
       </section>
       <small id="copy"
         >&copy; 2026 Agorà Online | Created by Theodoros Mitropoulos</small
       >
     </footer>
-    <script type="module" src="../dist/main.js"></script>
+    <script src="../dist/main.js" type="module"></script>
   </body>
 </html>
