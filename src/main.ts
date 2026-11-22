@@ -1,11 +1,32 @@
-import { example } from "./api.js";
+const openMenuBtn: HTMLElement | null =
+  document.getElementById("nav-secondary-btn");
 
-let age: number = 5;
+const secondaryMenu: HTMLElement | null = document.getElementById(
+  "navigation-container-secondary",
+);
 
-console.log(age);
+const closeMenuBtn: HTMLElement | null =
+  document.getElementById("close-nav-btn");
 
-const task: HTMLElement | null = document.getElementById("name");
+openMenuBtn?.addEventListener("click", () => {
+  if (secondaryMenu) {
+    if (window.innerWidth < 600) {
+      secondaryMenu.style.display = "inline-block";
+      secondaryMenu.classList.add("second-nav");
+    }
+    if (window.innerWidth > 601) {
+      secondaryMenu.style.display = "inline-block";
+      secondaryMenu.classList.add("second-nav-2");
+    }
+    if (window.innerWidth > 992) {
+      secondaryMenu.style.display = "inline-block";
+      secondaryMenu.classList.add("second-nav-3");
+    }
+  }
+});
 
-if (task) {
-  task.innerHTML = String(example);
-}
+closeMenuBtn?.addEventListener("click", () => {
+  if (secondaryMenu) {
+    secondaryMenu.style.display = "none";
+  }
+});

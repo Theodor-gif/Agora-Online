@@ -1,2 +1,2 @@
-export declare const example: number;
+export {};
 //# sourceMappingURL=api.d.ts.map

@@ -1,7 +1,2 @@
-const tas = document.getElementById("name");
-const personName = "Alex";
-if (tas) {
-    tas.innerHTML = personName;
-}
-export const example = 3;
+export {};
 //# sourceMappingURL=api.js.map
