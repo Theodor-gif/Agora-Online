@@ -35,8 +35,6 @@
           <li>
             <a class="nav-btn" href="./pages/account-page.html" target="_self"
               ><img
-                href=""
-                target="_self"
                 class="nav-icon"
                 src="./assets/navigation/AdminUser-icon.png"
                 alt="admin-icon"
@@ -55,7 +53,7 @@
             <button id="nav-secondary-btn" type="button">
               <img
                 class="nav-icon nav-btn"
-                src="./assets/navigation/hamburger-menu-icon.svg"
+                src="./assets/navigation/hamburger-menu-icon.png"
                 alt="hamburger-icon"
               />
             </button>
@@ -76,30 +74,31 @@
     </header>
     <main id="main-container">
       <img
+        id="main-logo"
         src="./assets/logo/symbol-logo-icon.png"
         alt="company-logo-icon"
-        width="150"
       />
-      <h1>Buy and sell with people near you</h1>
-      <p>
+      <h1 id="main-title">Buy and sell with people near you</h1>
+      <p class="main-description">
         Agorà Online is a community marketplace where anyone can turn things
         they no longer need into something useful for someone else.
       </p>
-      <p>
+      <p class="main-description main-secondary-description">
         Create a free account, post what you want to sell, and chat directly
         with interested buyers.
       </p>
-      <p>
+      <p class="main-description main-secondary-description">
         Looking for a bargain? Search by category or price and message the
         seller in a few taps.
       </p>
-      <form>
-        <div>
+      <form id="main-search-form">
+        <div id="main-subcontainer-form">
           <label for="search-post"
             ><img
+              id="main-search-icon"
               src="./assets/other-icons/Search-icon.png"
               alt="search-icon"
-              width="15"
+              width="17.5"
           /></label>
           <input
             id="search-post"
@@ -108,49 +107,46 @@
             placeholder="Search"
           />
         </div>
-        <button type="button">Search</button>
+        <button id="main-form-btn" type="button">Search</button>
       </form>
-      <section>
-        <div>
+      <section id="main-details-container">
+        <div class="main-description-detail">
           <img
+            class="main-details-icon"
+            src="./assets/other-icons/category-icon.png"
+            alt="plus-icon"
+          />
+          <h3 class="main-detail-title">Something for everyone</h3>
+          <p class="main-detail-paragraph">
+            Browse electronics, clothes, vehicles, home and sports, plus more
+            categories on the way. Use the filters to narrow the results by
+            price and category.
+          </p>
+        </div>
+        <div class="main-description-detail">
+          <img
+            class="main-details-icon"
             src="./assets/other-icons/upload-icon.png"
             alt="upload-icon"
-            width="50"
           />
-          <h3>Post for free</h3>
-          <p>
+          <h3 class="main-detail-title">Post for free</h3>
+          <p class="main-detail-paragraph">
             Create your account and list your items at no cost. Add a photo, a
             title, a price and a short description, and your post is live in
             minutes.
           </p>
         </div>
-        <div>
+        <div class="main-description-detail">
           <img
+            class="main-details-icon"
             src="./assets/other-icons/chat-icon.svg"
             alt="contact-sellers-icon"
-            width="50"
           />
-          <h3>Talk directly with sellers</h3>
-          <p>
+          <h3 class="main-detail-title">Talk directly with sellers</h3>
+          <p class="main-detail-paragraph">
             Found something you like? Send a private message to the seller from
             the post. No middlemen, no waiting: you agree on the details
             together.
-          </p>
-        </div>
-        <div>
-          <div>
-            <h3>Something for everyone</h3>
-            <img
-              src="./assets/other-icons/category-icon.png"
-              alt="plus-icon"
-              width="40"
-            />
-          </div>
-          <h3>Fiveplus more categories</h3>
-          <p>
-            Browse electronics, clothes, vehicles, home and sports, plus more
-            categories on the way. Use the filters to narrow the results by
-            price and category.
           </p>
         </div>
       </section>
