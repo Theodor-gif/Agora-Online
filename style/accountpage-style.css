@@ -4,181 +4,363 @@
   box-sizing: border-box;
 }
 
-/*.Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Header */
+
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  box-shadow: 0px 3px 5px grey;
+  background-color: rgb(236, 236, 220);
+}
+
+#header-logo {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 200px;
+}
+
+#navigation-container-main {
+  flex: 1;
+}
+
+#navigation-main {
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  gap: 12.5px;
+}
+
+.nav-icon {
+  width: 17.5px;
+}
+
+#navigation-container-secondary {
+  display: none;
+}
+
+.second-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgb(228, 146, 95);
+}
+
+#close-nav-btn {
+  border: none;
+  background-color: rgb(228, 146, 95);
+  cursor: pointer;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+#navigation-secondary {
+  margin: 60px auto 0 auto;
+  width: 80%;
+  list-style: none;
+}
+
+.nav-secondary-item {
+  margin: 20px 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(236, 236, 220);
+  border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-secondary-item:hover {
+  box-shadow: 2px 5px 10px rgb(239, 194, 153);
+}
+
+.nav-secondary-item > a {
+  text-decoration: none;
+  color: black;
+}
+
+#logOut-btn {
+  border: none;
+  background-color: rgb(236, 236, 220);
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+}
+
+.nav-btn {
+  cursor: pointer;
+}
+
+#nav-secondary-btn {
+  border: none;
+  background-color: rgb(236, 236, 220);
+}
+
+/* Main */
+
+#scroll-btn {
+  display: none;
+}
+
+#main-title {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 50px;
+}
+
+#main-paragraph {
+  width: 80vw;
+  margin: 40px auto 10px auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  color: grey;
+}
+
+#main-required-attencion {
+  width: 80vw;
+  margin: 0 auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+}
+
+#main-account-btn {
+  width: 80vw;
+  margin: 20px auto;
+}
+
+#form-register-btn {
+  margin-right: 10px;
+}
+
+.btn-form-appear {
+  font-size: 0.9rem;
+  width: 110px;
+  padding: 6px 4px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(232, 160, 109);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-form-appear:hover {
+  background-color: rgb(231, 126, 51);
+  color: rgb(237, 237, 237);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#main-form-container {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+.form-label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.input-register {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 200px;
+  margin: 5px 0;
+}
+
+#first-name-error {
+  display: none;
+}
+
+#last-name-error {
+  display: none;
+}
+
+#age-error {
+  display: none;
+}
+
+#email-error {
+  display: none;
+}
+
+#email-taken-error {
+  display: none;
+}
+
+#phone-error {
+  display: none;
+}
+
+#password-error {
+  display: none;
+}
+
+#password-hint {
+  display: none;
+}
+
+#log-form {
+  display: none;
+}
+
+#list-attencion-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  margin: 40px auto 100px auto;
+  padding-left: 50px;
+}
+
+#list-attencion-container > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: grey;
+  font-size: 0.9rem;
+}
+
+#term-container {
+  display: flex;
+  align-items: first baseline;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+#term-error {
+  display: none;
+}
+
+.form-btns-container {
+  margin: 40px 0 50px 0;
+}
+
+.form-btns-register {
+  font-size: 0.9rem;
+  width: 110px;
+  padding: 6px 4px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(232, 160, 109);
+  cursor: pointer;
+  transition: 0.4s;
+  margin-right: 10px;
+}
+
+.form-btns-register:hover {
+  background-color: rgb(231, 126, 51);
+  color: rgb(237, 237, 237);
+}
+
+/* Footer */
+
+#footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(236, 236, 220);
+  box-shadow: 0px -3px 5px grey;
+}
+
+.footer-parts {
+  width: 50vw;
+  margin: 40px auto 20px auto;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(231, 126, 51);
+}
+
+.footer-parts > h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+}
+
+#footer-list-one {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-top: 15px;
+}
+
+#footer-list-one > li > a {
+  text-decoration: none;
+  color: grey;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+}
+
+#footer-list-two {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-top: 15px;
+}
+
+#footer-list-two > li > a {
+  text-decoration: none;
+  color: grey;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+}
+
+#footer-list-three {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 15px;
+}
+
+#copy {
+  margin: 30px 0 20px 0;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.8rem;
+}
+
+/* Small devices ( portrait tablets and large phones, 600px and up ) */
+@media (min-width: 601px) {
   body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     position: relative;
-  }
-
-  /* Header */
-
-  #header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 8px;
-    box-shadow: 0px 3px 5px grey;
-    background-color: rgb(236, 236, 220);
-  }
-
-  #header-logo {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 200px;
-  }
-
-  #navigation-container-main {
-    flex: 1;
-  }
-
-  #navigation-main {
-    flex: 0 0 auto;
-    width: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    gap: 12.5px;
-  }
-
-  .nav-icon {
-    width: 17.5px;
-  }
-
-  #navigation-container-secondary {
-    display: none;
-  }
-
-  .second-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: rgb(228, 146, 95);
-  }
-
-  #close-nav-btn {
-    border: none;
-    background-color: rgb(228, 146, 95);
-    cursor: pointer;
-    position: fixed;
-    right: 10px;
-    top: 10px;
-  }
-
-  #navigation-secondary {
-    margin: 60px auto 0 auto;
-    width: 80%;
-    list-style: none;
-  }
-
-  .nav-secondary-item {
-    margin: 20px 0;
-    font-family:
-      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 1rem;
-    padding: 5px;
-    text-align: center;
-    background-color: rgb(236, 236, 220);
-    border-radius: 5px;
-    transition: 0.4s;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .nav-secondary-item:hover {
-    box-shadow: 2px 5px 10px rgb(239, 194, 153);
-  }
-
-  .nav-secondary-item > a {
-    text-decoration: none;
-    color: black;
-  }
-
-  #logOut-btn {
-    border: none;
-    background-color: rgb(236, 236, 220);
-    cursor: pointer;
-    font-family:
-      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 1rem;
-  }
-
-  .nav-btn {
-    cursor: pointer;
-  }
-
-  #nav-secondary-btn {
-    border: none;
-    background-color: rgb(236, 236, 220);
-  }
-
-  /* Main */
-
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    margin: 0 auto;
-  }
-  .form-btns-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-
-  /* Footer */
-
-  #footer-container {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer-parts {
-    width: 50vw;
-    margin: 0 auto 20px auto;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #footer-list-one {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    padding-top: 15px;
-  }
-  #footer-list-two {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    padding-top: 15px;
-  }
-  #footer-list-three {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-top: 15px;
-  }
-  #copy {
-    text-align: center;
-  }
-}
-
-/* Small devices ( portrait tablets and large phones, 600px and up ) */
-@media only screen and (min-width: 601px) {
-  body {
-    background-color: yellow;
   }
 
   /* Header */
@@ -287,14 +469,18 @@
 /*.Medium devices ( landscape tablets, 768px and up ) */
 @media (min-width: 768px) {
   body {
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    position: relative;
   }
 }
 
 /* Large devices ( laptops/desktops, 992px and up ) */
 @media (min-width: 992px) {
   body {
-    background-color: green;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    position: relative;
   }
 
   /* Header */
@@ -359,10 +545,70 @@
     border: none;
     background-color: rgb(236, 236, 220);
   }
+
+  /* Main */
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "info  info"
+      "form  rules";
+    align-items: start;
+  }
+
+  #main-info {
+    grid-area: info;
+  }
+
+  #main-paragraph {
+    text-align: center;
+    width: 400px;
+  }
+
+  #main-required-attencion {
+    width: 400px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #main-account-btn {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #register-form {
+    grid-area: form;
+    width: 400px;
+  }
+
+  #list-attencion-container {
+    grid-area: rules;
+    width: 400px;
+    gap: 30px;
+  }
+
+  /* Footer */
+
+  #footer-container > section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-parts {
+    border: none;
+    border-right: 1px solid rgb(231, 126, 51);
+    margin: 50px 0;
+  }
+
+  .footer-parts:last-child {
+    border: none;
+  }
 }
 
 /* Extra large devices ( large laptops and desktops, 1200px and up ) */
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;

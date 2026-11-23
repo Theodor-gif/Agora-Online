@@ -89,7 +89,7 @@
         </ul>
       </nav>
     </header>
-    <button type="button">
+    <button id="scroll-btn" type="button">
       <img
         src="../assets/other-icons/arrow-up-icon.png"
         alt="arrow-up-icon"
@@ -97,21 +97,30 @@
       />
     </button>
     <main>
-      <h1>Welcome to Agorà Online</h1>
-      <p>
-        Create a free account to post items and message sellers, or log in if
-        you already have one.
-      </p>
-      <p>Required fields *</p>
-      <div>
-        <button type="button">Create account</button>
-        <button type="button">Log in</button>
-      </div>
+      <section id="main-info">
+        <h1 id="main-title">Welcome to Agorà Online</h1>
+        <p id="main-paragraph">
+          Create a free account to post items and message sellers, or log in if
+          you already have one.
+        </p>
+        <p id="main-required-attencion">Required fields *</p>
+        <div id="main-account-btn">
+          <button class="btn-form-appear" id="form-register-btn" type="button">
+            Create account
+          </button>
+          <button class="btn-form-appear" id="form-log-btn" type="button">
+            Log in
+          </button>
+        </div>
+      </section>
       <form id="register-form" class="form-container">
-        <h2>Create your account</h2>
-        <label for="first-name">First name<span> *</span></label>
+        <h2 id="main-form-container">Create your account</h2>
+        <label class="form-label" for="first-name"
+          >First name<span> *</span></label
+        >
         <div>
           <input
+            class="input-register"
             id="first-name"
             type="text"
             name="first_name"
@@ -131,9 +140,12 @@
           />
         </div>
         <small id="first-name-error">Please enter your first name.</small>
-        <label for="last-name">Last name<span> *</span></label>
+        <label class="form-label" for="last-name"
+          >Last name<span> *</span></label
+        >
         <div>
           <input
+            class="input-register"
             id="last-name"
             type="text"
             name="last_name"
@@ -153,9 +165,10 @@
           />
         </div>
         <small id="last-name-error">Please enter your last name.</small>
-        <label for="age">Age<span> *</span></label>
+        <label class="form-label" for="age">Age<span> *</span></label>
         <div>
           <input
+            class="input-register"
             id="age"
             type="number"
             name="age"
@@ -176,9 +189,12 @@
           />
         </div>
         <small id="age-error">You must be at least 18 years old.</small>
-        <label for="email-register">Email<span> *</span></label>
+        <label class="form-label" for="email-register"
+          >Email<span> *</span></label
+        >
         <div>
           <input
+            class="input-register"
             id="email-register"
             type="email"
             name="email"
@@ -200,9 +216,12 @@
         </div>
         <small id="email-error">Please enter a valid email address.</small>
         <small id="email-taken-error">This email is already registered.</small>
-        <label for="phone-number">Telephone number<span> *</span></label>
+        <label class="form-label" for="phone-number"
+          >Telephone number<span> *</span></label
+        >
         <div>
           <input
+            class="input-register"
             id="phone-number"
             type="tel"
             name="tel_number"
@@ -222,9 +241,12 @@
           />
         </div>
         <small id="phone-error">Please enter a valid number.</small>
-        <label for="password-register">Password<span> *</span></label>
+        <label class="form-label" for="password-register"
+          >Password<span> *</span></label
+        >
         <div>
           <input
+            class="input-register"
             id="password-register"
             type="password"
             name="password"
@@ -255,9 +277,12 @@
           </button>
         </div>
         <small id="password-error">Please enter a valid password.</small>
-        <label for="password-confirm">Confirm password<span> *</span></label>
+        <label class="form-label" for="password-confirm"
+          >Confirm password<span> *</span></label
+        >
         <div>
           <input
+            class="input-register"
             id="password-confirm"
             type="password"
             name="password-confirm"
@@ -288,62 +313,61 @@
           </button>
         </div>
         <small id="password-hint">Password do not match.</small>
-        <ul>
-          <li>
-            <img
-              src="../assets/other-icons/attencion-icon.png"
-              alt="alert-icon"
-              width="15"
-            />
-            At least one upper case English letter
-          </li>
-          <li>
-            <img
-              src="../assets/other-icons/attencion-icon.png"
-              alt="alert-icon"
-              width="15"
-            />
-            At least one digit
-          </li>
-          <li>
-            <img
-              src="../assets/other-icons/attencion-icon.png"
-              alt="alert-icon"
-              width="15"
-            />
-            At least one lower case English letter
-          </li>
-          <li>
-            <img
-              src="../assets/other-icons/attencion-icon.png"
-              alt="alert-icon"
-              width="15"
-            />
-            At least one special character: -./',;&amp;@#*)(_+:&ldquo;~
-          </li>
-          <li>
-            <img
-              src="../assets/other-icons/attencion-icon.png"
-              alt="alert-icon"
-              width="15"
-            />
-            Minimum eight in length
-          </li>
-        </ul>
-        <label for="check-terms"
-          ><input
-            id="check-terms"
-            type="checkbox"
-            name="check-terms"
-            required
-          />I accept the Terms and Conditions and the Privacy Policy</label
-        >
-        <small>You need to accept the terms to continue.</small>
+
+        <div id="term-container">
+          <input id="check-terms" type="checkbox" name="check-terms" required />
+          <label for="check-terms"
+            >I accept the Terms and Conditions and the Privacy Policy</label
+          >
+        </div>
+        <small id="term-error">You need to accept the terms to continue.</small>
         <div id="formRegister-btns-container" class="form-btns-container">
-          <button type="submit">Register</button>
-          <button type="reset">Clear all</button>
+          <button class="form-btns-register" type="submit">Register</button>
+          <button class="form-btns-register" type="reset">Clear all</button>
         </div>
       </form>
+      <ul id="list-attencion-container">
+        <li>
+          <img
+            src="../assets/other-icons/attencion-icon.png"
+            alt="alert-icon"
+            width="15"
+          />
+          At least one upper case English letter
+        </li>
+        <li>
+          <img
+            src="../assets/other-icons/attencion-icon.png"
+            alt="alert-icon"
+            width="15"
+          />
+          At least one digit
+        </li>
+        <li>
+          <img
+            src="../assets/other-icons/attencion-icon.png"
+            alt="alert-icon"
+            width="15"
+          />
+          At least one lower case English letter
+        </li>
+        <li>
+          <img
+            src="../assets/other-icons/attencion-icon.png"
+            alt="alert-icon"
+            width="15"
+          />
+          At least one special character: -./',;&amp;@#*)(_+:&ldquo;~
+        </li>
+        <li>
+          <img
+            src="../assets/other-icons/attencion-icon.png"
+            alt="alert-icon"
+            width="15"
+          />
+          Minimum eight in length
+        </li>
+      </ul>
       <form id="log-form" class="form-container">
         <h2>Log in</h2>
         <label for="email-log">Email<span> *</span></label>
