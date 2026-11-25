@@ -55,22 +55,37 @@
             <button id="nav-secondary-btn" type="button">
               <img
                 class="nav-icon nav-btn"
-                src="../assets/navigation/hamburger-menu-icon.svg"
+                src="../assets/navigation/hamburger-menu-icon.png"
                 alt="hamburger-icon"
               />
             </button>
           </li>
         </ul>
       </nav>
-      <nav id="navigation-container-secondary">
+      <nav id="navigation-container-secondary" class="second-nav">
+        <button id="close-nav-btn">
+          <img
+            src="../assets/navigation/cancel-icon.png"
+            alt="cancel-icon"
+            width="20"
+          />
+        </button>
         <ul id="navigation-secondary">
-          <li><a href="" target="_self">Account information</a></li>
-          <li>
-            <a href="./pages/post-add-page.html" target="_self">Add Post</a>
+          <li class="nav-secondary-item">
+            <a href="#" target="_self">Account information</a>
           </li>
-          <li><a href="" target="_self">My Post's</a></li>
-          <li><a href="" target="_self">My message's</a></li>
-          <li><button type="button">Log out</button></li>
+          <li class="nav-secondary-item">
+            <a href="./post-add-page.html" target="_self">Add Post</a>
+          </li>
+          <li class="nav-secondary-item">
+            <a href="#" target="_self">My Posts</a>
+          </li>
+          <li class="nav-secondary-item">
+            <a href="#" target="_self">My messages</a>
+          </li>
+          <li class="nav-secondary-item">
+            <button id="logOut-btn" type="button">Log out</button>
+          </li>
         </ul>
       </nav>
     </header>

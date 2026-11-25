@@ -357,12 +357,6 @@ body {
 
 /* Small devices ( portrait tablets and large phones, 600px and up ) */
 @media (min-width: 601px) {
-  body {
-    background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
-    position: relative;
-  }
-
   /* Header */
 
   #header-container {
@@ -468,21 +462,10 @@ body {
 
 /*.Medium devices ( landscape tablets, 768px and up ) */
 @media (min-width: 768px) {
-  body {
-    background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
-    position: relative;
-  }
 }
 
 /* Large devices ( laptops/desktops, 992px and up ) */
 @media (min-width: 992px) {
-  body {
-    background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
-    position: relative;
-  }
-
   /* Header */
 
   .second-nav-3 {
@@ -609,11 +592,6 @@ body {
 
 /* Extra large devices ( large laptops and desktops, 1200px and up ) */
 @media (min-width: 1200px) {
-  body {
-    background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
-  }
-
   main {
     max-width: 1200px;
     margin: 0 auto;
