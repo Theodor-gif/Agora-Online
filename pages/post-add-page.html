@@ -89,21 +89,24 @@
     </header>
     <main>
       <section id="post-intro">
-        <h1>Give your item a new home</h1>
-        <p>
+        <h1 id="main-title">Give your item a new home</h1>
+        <p class="main-paragraph">
           Got something you no longer need? Give it a second life by listing it
           on Agorà Online. Fill in the details below and your post will be
           visible to buyers in your area.
         </p>
-        <p>
+        <p class="main-paragraph">
           A clear title, an honest description and a good photo help your item
           sell faster.
         </p>
-        <p><span>*</span> Required fields</p>
+        <p class="main-paragraph"><span>*</span> Required fields</p>
       </section>
-      <form>
-        <label for="post-title">What are you selling?<span> *</span></label>
+      <form id="main-form-container">
+        <label id="label-form-title" class="label-form" for="post-title"
+          >What are you selling?<span> *</span></label
+        >
         <input
+          class="input-text-form"
           id="post-title"
           type="text"
           name="title"
@@ -112,125 +115,175 @@
           placeholder="e.g. Blue mountain bike, 26 inch"
         />
         <section>
-          <h3>Choose a category<span> *</span></h3>
-          <div>
-            <input
-              id="electronics-post"
-              type="radio"
-              name="category"
-              value="electronics"
-              required
-            />
-            <label for="electronics-post">Electronics</label>
-            <input
-              id="clothes-post"
-              type="radio"
-              name="category"
-              value="clothes"
-            />
-            <label for="clothes-post">Clothes</label>
-            <input id="home-post" type="radio" name="category" value="home" />
-            <label for="home-post">Home</label>
-            <input
-              id="sports-post"
-              type="radio"
-              name="category"
-              value="sports"
-            />
-            <label for="sports-post">Sports</label>
-            <input
-              id="vehicles-post"
-              type="radio"
-              name="category"
-              value="vehicles"
-            />
-            <label for="vehicles-post">Vehicles</label>
-            <input
-              id="books-media-post"
-              type="radio"
-              name="category"
-              value="books_and_media"
-            />
-            <label for="books-media-post">Books &amp; Media</label>
-            <input
-              id="toys-kids-post"
-              type="radio"
-              name="category"
-              value="toys_and_kids"
-            />
-            <label for="toys-kids-post">Toys &amp; Kids</label>
-            <input
-              id="garden-tools-post"
-              type="radio"
-              name="category"
-              value="garden_and_tools"
-            />
-            <label for="garden-tools-post">Garden &amp; Tools</label>
-            <input id="pets-post" type="radio" name="category" value="pets" />
-            <label for="pets-post">Pets</label>
-            <input id="other-post" type="radio" name="category" value="other" />
-            <label for="other-post">Other</label>
+          <h3 class="label-form">Choose a category<span> *</span></h3>
+          <div id="category-section-container">
+            <div>
+              <input
+                id="electronics-post"
+                type="radio"
+                name="category"
+                value="electronics"
+                required
+              />
+              <label for="electronics-post">Electronics</label>
+            </div>
+            <div>
+              <input
+                id="clothes-post"
+                type="radio"
+                name="category"
+                value="clothes"
+              />
+              <label for="clothes-post">Clothes</label>
+            </div>
+            <div>
+              <input id="home-post" type="radio" name="category" value="home" />
+              <label for="home-post">Home</label>
+            </div>
+            <div>
+              <input
+                id="sports-post"
+                type="radio"
+                name="category"
+                value="sports"
+              />
+              <label for="sports-post">Sports</label>
+            </div>
+            <div>
+              <input
+                id="vehicles-post"
+                type="radio"
+                name="category"
+                value="vehicles"
+              />
+              <label for="vehicles-post">Vehicles</label>
+            </div>
+            <div>
+              <input
+                id="books-media-post"
+                type="radio"
+                name="category"
+                value="books_and_media"
+              />
+              <label for="books-media-post">Books &amp; Media</label>
+            </div>
+            <div>
+              <input
+                id="toys-kids-post"
+                type="radio"
+                name="category"
+                value="toys_and_kids"
+              />
+              <label for="toys-kids-post">Toys &amp; Kids</label>
+            </div>
+            <div>
+              <input
+                id="garden-tools-post"
+                type="radio"
+                name="category"
+                value="garden_and_tools"
+              />
+              <label for="garden-tools-post">Garden &amp; Tools</label>
+            </div>
+            <div>
+              <input id="pets-post" type="radio" name="category" value="pets" />
+              <label for="pets-post">Pets</label>
+            </div>
+            <div>
+              <input
+                id="other-post"
+                type="radio"
+                name="category"
+                value="other"
+              />
+              <label for="other-post">Other</label>
+            </div>
           </div>
         </section>
         <section>
-          <h3>What condition is it in?<span> *</span></h3>
-          <div>
-            <input
-              id="new-post"
-              type="radio"
-              name="condition"
-              value="new"
-              required
-            />
-            <label for="new-post">New</label>
-            <input
-              id="like-new-post"
-              type="radio"
-              name="condition"
-              value="like_new"
-            />
-            <label for="like-new-post">Like new</label>
-            <input
-              id="used-post"
-              type="radio"
-              name="condition"
-              value="used"
-              checked
-            />
-            <label for="used-post">Used</label>
-            <input
-              id="for-parts-post"
-              type="radio"
-              name="condition"
-              value="for_parts"
-            />
-            <label for="for-parts-post">For parts</label>
+          <h3 class="label-form">What condition is it in?<span> *</span></h3>
+          <div class="section-container">
+            <div class="radio-container">
+              <input
+                id="new-post"
+                type="radio"
+                name="condition"
+                value="new"
+                required
+              />
+              <label for="new-post">New</label>
+            </div>
+            <div class="radio-container">
+              <input
+                id="like-new-post"
+                type="radio"
+                name="condition"
+                value="like_new"
+              />
+              <label for="like-new-post">Like new</label>
+            </div>
+            <div class="radio-container">
+              <input
+                id="like-new-post"
+                type="radio"
+                name="condition"
+                value="like_new"
+              />
+              <label for="like-new-post">Like new</label>
+            </div>
+            <div class="radio-container">
+              <input
+                id="used-post"
+                type="radio"
+                name="condition"
+                value="used"
+                checked
+              />
+              <label for="used-post">Used</label>
+            </div>
+            <div class="radio-container">
+              <input
+                id="for-parts-post"
+                type="radio"
+                name="condition"
+                value="for_parts"
+              />
+              <label for="for-parts-post">For parts</label>
+            </div>
           </div>
         </section>
         <section>
-          <h3>Availability<span> *</span></h3>
-          <div>
-            <input
-              id="post-active"
-              type="radio"
-              name="status"
-              value="active"
-              required
-              checked
-            />
-            <label for="post-active">Active</label>
-            <input id="post-sold" type="radio" name="status" value="sold" />
-            <label for="post-sold">Sold</label>
-            <input
-              id="post-reserved"
-              type="radio"
-              name="status"
-              value="reserved"
-            />
-            <label for="post-reserved">Reserved</label>
+          <h3 class="label-form">Availability<span> *</span></h3>
+          <div class="section-container">
+            <div class="radio-container">
+              <input
+                id="post-active"
+                type="radio"
+                name="status"
+                value="active"
+                required
+                checked
+              />
+              <label for="post-active">Active</label>
+            </div>
+            <div class="radio-container">
+              <input id="post-sold" type="radio" name="status" value="sold" />
+              <label for="post-sold">Sold</label>
+            </div>
+            <div class="radio-container">
+              <input
+                id="post-reserved"
+                type="radio"
+                name="status"
+                value="reserved"
+              />
+              <label for="post-reserved">Reserved</label>
+            </div>
           </div>
         </section>
-        <label for="post-image">Add a photo<span> *</span></label>
+        <label class="label-form" for="post-image"
+          >Add a photo<span> *</span></label
+        >
         <input
           id="post-image"
           type="file"
@@ -242,8 +295,11 @@
         <small id="image-hint"
           >PNG, JPEG or WebP. A bright, clear photo sells faster.</small
         >
-        <label for="post-area">Where is it located?<span> *</span></label>
+        <label class="label-form" for="post-area"
+          >Where is it located?<span> *</span></label
+        >
         <input
+          class="input-text-form"
           id="post-area"
           type="text"
           name="area"
@@ -251,9 +307,12 @@
           required
           placeholder="e.g. Athens, Kifisia"
         />
-        <label for="post-price">Your price<span> *</span></label>
+        <label class="label-form" for="post-price"
+          >Your price<span> *</span></label
+        >
         <div>
           <input
+            class="input-text-form"
             id="post-price"
             type="number"
             name="price"
@@ -264,8 +323,7 @@
             placeholder="e.g. 25.00"
           /><span> &euro;</span>
         </div>
-
-        <label for="post-description"
+        <label class="label-form" for="post-description"
           >Tell buyers about it<span> *</span></label
         >
         <textarea
@@ -278,9 +336,9 @@
           placeholder="Describe your item: brand, size, age, any defects, and why you're selling it."
         ></textarea>
         <small id="desc-count">0 / 5000</small>
-        <div>
-          <button type="submit">Publish listing</button>
-          <button type="reset">Start over</button>
+        <div id="btn-container">
+          <button class="form-btn" type="submit">Publish listing</button>
+          <button class="form-btn" type="reset">Start over</button>
         </div>
       </form>
     </main>
